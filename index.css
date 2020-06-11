@@ -1,0 +1,145 @@
+::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--light);
+    border: 0px none #ffffff;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark);
+    border: 0px none #ffffff;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #666666;
+}
+
+::-webkit-scrollbar-track:active {
+    background: #333333;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+#menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#game {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#game .content {
+    position: absolute;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    top: 0;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}
+
+#game .content .page,
+#game .content .sidebar {
+    will-change: width;
+    transition: all ease 1s;
+}
+
+#game .content .page {
+    height: calc(100% - 30px);
+    overflow-y: auto;
+    float: left;
+    width: 74%;
+    overflow-x: hidden;
+    display: none;
+}
+
+#game .content .page a {
+    color: var(--info);
+}
+
+#game .content .sidebar {
+    float: right;
+    width: 25%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-top: 1em;
+    padding-right: 1em;
+}
+
+#game.end .content .page {
+    width: 0;
+}
+
+#game.end .content .sidebar {
+    width: 100%;
+    padding-left: 1%;
+    margin-left: 1em;
+}
+
+#game.end .content .sidebar .game-timer {
+    background-color: var(--success);
+    font-size: 2em;
+}
+
+#game:not(.end) .ended {
+    display: none;
+}
+
+#game .content .page .mw-editsection,
+#game .content .page .reflist,
+#game .content .page .noprint,
+#game .preloader {
+    display: none;
+}
+
+#game .content .infobox_v2 {
+    float: right;
+}
+
+#game .countdown,
+#game .preloader {
+    background-color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#game .countdown .timer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

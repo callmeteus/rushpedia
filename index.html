@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+
+    <title>Rushpedia</title>
+</head>
+<body>
+    <div class="container" id="menu">
+        <h1 class="mb-0">Rushpedia</h1>
+        <p class="text-muted">A game that will make you <strong>rush</strong> over all Wikipedia!</p>
+
+        <form>
+            <div class="form-group">
+                <label for="from">From</label>
+
+                <div class="input-group">
+                    <input type="url" class="form-control" required name="from" id="from" placeholder="Go from this Wikipedia page" />
+                    <div class="input-group-append">
+                        <button class="btn btn-info btn-randomize" type="button">Randomize</button>
+                    </div>
+                </div>
+
+                <small class="form-text text-muted">The Wikipedia page URL to start from</small>
+            </div>
+
+            <div class="form-group">
+                <label for="to">To</label>
+
+                <div class="input-group">
+                    <input type="url" class="form-control" required name="to" id="to" placeholder="Go to this Wikipedia page" />
+                    <div class="input-group-append">
+                        <button class="btn btn-info btn-randomize" type="button">Randomize</button>
+                    </div>
+                </div>
+
+                <small class="form-text text-muted">The Wikipedia page URL to end on</small>
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-success btn-start btn-lg">Rush it!</button>
+            </div>
+        </form>
+
+        <p class="text-muted">
+            * The page loading times are not counted in the final time.
+        </p>
+    </div>
+
+    <div id="game">
+        <div class="content">
+            <div class="page">&nbsp;</div>
+            <div class="sidebar">
+                <h2 class="ended">Game Ended</h2>
+
+                <button class="btn btn-success btn-lg btn-play-again ended my-3 w-100">Play again</button>
+
+                <strong class="ended">Final time</strong>
+                <div class="badge badge-info text-center game-timer w-100 mb-3 p-3">0</div>
+
+                <div class="ended my-3">
+                    <div class="addthis_inline_share_toolbox"></div>
+                </div>
+
+                <h4>Visited Pages</h4>
+
+                <div class="list-group" id="visited-pages"></div>
+            </div>
+        </div>
+
+        <div class="countdown">
+            <h1 class="timer mb-0">...</h1>
+        </div>
+
+        <div class="preloader"></div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ee184984fdbb968"></script>
+</body>
+</html>
