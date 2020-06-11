@@ -197,7 +197,7 @@
         $("#game").removeClass("end").show();
 
         // Clear the game contents
-        $("#game .content .page, #game .content #visited-pages").html(null);
+        $("#game .content .page, #game .content #visited-pages, .game .content .sidebar").html(null);
 
         // Show the countdown
         $("#game .countdown").show();
@@ -221,7 +221,7 @@
                     $("#game .countdown").hide();
 
                     // Show the game container
-                    $("#game .page, #game .sidebar").show();
+                    $("#game .content .page, #game .content .sidebar").show();
 
                     // Load the first page
                     wikipedia_go_to(game.from);
